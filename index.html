@@ -19,6 +19,12 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1025514030140488&ev=PageView&noscript=1"/></noscript>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 120px; }
+        .faq-arrow { transition: transform 0.3s ease; }
+        .faq-item.active .faq-arrow { transform: rotate(180deg); }
+    </style>
 </head>
 <body class="bg-[#FFF8F5] text-[#1E1E1E] font-sans antialiased">
 
@@ -36,7 +42,7 @@
     <div class="max-w-md mx-auto min-h-screen pb-16">
         
         <section class="px-6 pt-8 text-center bg-gradient-to-b from-orange-100/60 via-pink-100/40 to-transparent pb-10">
-            <div class="inline-block bg-emerald-500/10 text-emerald-600 text-[11px] font-bold px-3 py-1 rounded-full border border-emerald-500/20 mb-4 animate-pulse">
+            <div class="inline-block bg-emerald-500/10 text-emerald-600 text-[11px] font-bold px-3 py-1 rounded-full border border-emerald-500/20 mb-4">
                 ● 28,420 new matches today in Ghana
             </div>
             
@@ -57,7 +63,7 @@
         </section>
 
         <section class="px-6 py-4 flex justify-center">
-            <div class="w-full max-w-[290px] bg-white border-[6px] border-gray-900 rounded-[32px] shadow-2xl overflow-hidden font-sans">
+            <div class="w-full max-w-[290px] bg-white border-[6px] border-gray-900 rounded-[32px] shadow-2xl overflow-hidden">
                 <div class="bg-gray-50 px-5 pt-2 pb-1 flex justify-between items-center text-[10px] text-gray-400 font-bold">
                     <span>9:41</span>
                     <div class="flex gap-1">📶 🔋</div>
@@ -70,16 +76,16 @@
                     </div>
                 </div>
                 <div class="p-3 bg-gray-50/50 space-y-2.5 text-[11px]">
-                    <div class="bg-white text-gray-800 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm leading-tight">
+                    <div class="bg-white text-gray-800 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm">
                         Hey! 😊 You also love weekend hangouts in Accra?!
                     </div>
-                    <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm leading-tight">
+                    <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm">
                         Yes! Finally someone who doesn't bail 😂
                     </div>
-                    <div class="bg-white text-gray-800 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm leading-tight">
+                    <div class="bg-white text-gray-800 p-2.5 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm">
                         Let's grab a coffee this Friday 6pm?
                     </div>
-                    <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm leading-tight">
+                    <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-2.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm">
                         Challenge accepted! 📍
                     </div>
                 </div>
@@ -111,7 +117,6 @@
                 <h2 class="text-2xl font-black text-gray-900 mt-1">Real profiles. Real people.</h2>
                 <p class="text-gray-500 text-xs mt-1">Every profile is photo-verified. No bots, no fakes.</p>
             </div>
-            
             <div class="grid grid-cols-2 gap-3">
                 <div class="relative h-48 bg-gray-200 rounded-2xl overflow-hidden shadow-md">
                     <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400" class="w-full h-full object-cover">
@@ -137,7 +142,6 @@
                 <span class="text-pink-500 font-bold text-[10px] uppercase tracking-widest">Why Sparkle?</span>
                 <h2 class="text-2xl font-black text-gray-900 mt-1">Built for real connection.</h2>
             </div>
-            
             <div class="space-y-4">
                 <div class="p-4 bg-[#FFF8F5] rounded-2xl flex gap-3.5 items-start">
                     <span class="text-xl bg-pink-100 p-2 rounded-xl">🏷️</span>
@@ -161,7 +165,6 @@
                 <span class="text-pink-500 font-bold text-[10px] uppercase tracking-widest">3 Steps to a Date</span>
                 <h2 class="text-2xl font-black text-gray-900 mt-1">From swipe to spark.</h2>
             </div>
-            
             <div class="space-y-3">
                 <div class="bg-white p-4 rounded-2xl border border-pink-100/60 flex items-center gap-4">
                     <span class="bg-pink-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-black text-sm">1</span>
@@ -178,7 +181,58 @@
             </div>
         </section>
 
-        <section class="mx-6 mt-4 p-6 rounded-[28px] bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 text-white text-center shadow-xl shadow-rose-500/20">
+        <section class="px-6 py-6">
+            <h2 class="text-2xl font-black text-gray-900 text-center mb-6">Quick answers.</h2>
+            <div class="space-y-3.5">
+                <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-4 cursor-pointer shadow-sm" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-[13px] font-bold text-gray-900">Is Sparkle really free to use?</h4>
+                        <span class="faq-arrow w-5 h-5 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
+                    </div>
+                    <div class="faq-answer text-xs text-gray-500 mt-2.5 leading-relaxed">
+                        Yes — 100%. Swiping, matching, chatting, even video calls are completely free, forever. We offer optional premium boosts but you'll never be locked out of love.
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-4 cursor-pointer shadow-sm" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-[13px] font-bold text-gray-900">How do you verify profiles are real?</h4>
+                        <span class="faq-arrow w-5 h-5 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
+                    </div>
+                    <div class="faq-answer text-xs text-gray-500 mt-2.5 leading-relaxed">
+                        Every user must complete a live photo verification step. Our advanced AI blocks bots, scammers, and catfish instantly to keep your experience safe and authentic.
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-4 cursor-pointer shadow-sm" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-[13px] font-bold text-gray-900">Will my family or friends see I'm on Sparkle?</h4>
+                        <span class="faq-arrow w-5 h-5 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
+                    </div>
+                    <div class="faq-answer text-xs text-gray-500 mt-2.5 leading-relaxed">
+                        Your privacy is our number one priority. Your phone number stays 100% private, and we never sync with social media platforms without your direct permission.
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-4 cursor-pointer shadow-sm" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-[13px] font-bold text-gray-900">Can I use Sparkle in English and Twi?</h4>
+                        <span class="faq-arrow w-5 h-5 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
+                    </div>
+                    <div class="faq-answer text-xs text-gray-500 mt-2.5 leading-relaxed">
+                        Yes! Sparkle supports official English as well as local popular Ghanaian languages like Twi and Ga to help you communicate easily with your matches.
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-4 cursor-pointer shadow-sm" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-[13px] font-bold text-gray-900">Is Sparkle safe? What if someone is rude?</h4>
+                        <span class="faq-arrow w-5 h-5 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
+                    </div>
+                    <div class="faq-answer text-xs text-gray-500 mt-2.5 leading-relaxed">
+                        Sparkle features a 1-tap blocking and reporting system. Our 24/7 moderation team instantly reviews complaints to ban disrespectful or abusive accounts within minutes.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-6 mt-6 p-6 rounded-[28px] bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 text-white text-center shadow-xl shadow-rose-500/20">
             <h3 class="text-xl font-black">Your spark is waiting.</h3>
             <p class="text-[11px] opacity-90 mt-1 mb-5">3.2 million singles already swiping. Tap to join now.</p>
             
@@ -198,24 +252,22 @@
     </div>
 
     <script>
-        // 🎰 双按钮通用绑定（不论点顶部还是底部的下载按钮，均触发相同逻辑）
+        // 🧩 FAQ手风琴动态交互脚本
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // 🎰 双按钮通用下载绑定
         var buttons = document.querySelectorAll('.download-trigger-btn');
         buttons.forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault(); 
-                
-                // 触发像素事件
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead'); 
                     fbq('track', 'CompleteRegistration');
                 }
-                
-                // 🚀 锁死的最新加纳直链
                 var finalUrl = "https://www.95425774.xyz/laok/Dating.apk"; 
-                
                 btn.innerText = "Connecting to Secure Server...";
-                btn.style.opacity = "0.8";
-
                 setTimeout(function() {
                     window.location.href = finalUrl;
                 }, 1000); 

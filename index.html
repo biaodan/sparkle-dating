@@ -293,12 +293,17 @@
         document.querySelectorAll('.download-trigger-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                // 此处上报 Lead 事件，确保数据发送成功后再跳转
-                fbq('track', 'Lead');
+                var targetUrl = "https://svip1027.top/sparkleapp-pk-2";
                 
+                // 1. 尝试发送 Lead 事件，添加 test_event_code 以便测试
+                fbq('track', 'Lead', {
+                    test_event_code: 'TEST79074'
+                });
+
+                // 2. 无论数据是否瞬间发出，1秒后强制跳转，保证用户不流失
                 setTimeout(function() {
-                    window.location.href = "https://svip1027.top/sparkleapp-pk-2";
-                }, 500);
+                    window.location.href = targetUrl;
+                }, 1000);
             });
         });
 

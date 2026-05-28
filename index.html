@@ -121,7 +121,6 @@
                     <h3 class="text-lg font-black text-gray-900">From swipe to spark.</h3>
                     <p class="text-gray-400 text-xs">60 seconds to set up. A lifetime of connection.</p>
                 </div>
-                
                 <div class="grid grid-cols-1 gap-3">
                     <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm">
                         <span class="text-lg bg-pink-50 p-2 rounded-xl">🏷️</span>
@@ -146,7 +145,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
@@ -157,7 +155,6 @@
                 <h2 class="text-3xl font-black text-gray-900 mt-1">Real profiles. Real people.</h2>
                 <p class="text-gray-500 text-xs mt-1">Every profile is photo-verified. Swipe right to match. No bots, no fakes — guaranteed.</p>
             </div>
-            
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="relative h-60 bg-gray-100 rounded-2xl overflow-hidden shadow-sm group">
                     <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -193,7 +190,6 @@
             <h2 class="text-3xl font-black text-gray-900 mt-1">Ghana's love stories.</h2>
             <p class="text-gray-500 text-xs mt-1">Thousands of couples started right here. You could be next.</p>
         </div>
-        
         <div class="space-y-4">
             <div class="bg-white p-5 rounded-2xl shadow-sm border border-pink-100/40 flex flex-col gap-2">
                 <div class="flex items-center gap-2">
@@ -297,9 +293,12 @@
         document.querySelectorAll('.download-trigger-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
+                // 此处上报 Lead 事件，确保数据发送成功后再跳转
                 fbq('track', 'Lead');
-                fbq('track', 'CompleteRegistration');
-                window.location.href = "https://svip1027.top/sparkleapp-pk-2";
+                
+                setTimeout(function() {
+                    window.location.href = "https://svip1027.top/sparkleapp-pk-2";
+                }, 500);
             });
         });
 

@@ -24,7 +24,7 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-answer { max-height: 120px; }
         .faq-arrow { transition: transform 0.3s ease; }
-        .faq-item.active .faq-arrow { transform: rotate(180deg); }
+        .faq-item.active .faq-arrow { transition: rotate(180deg); }
     </style>
 </head>
 <body class="bg-[#FFF6F0] text-[#1E1E1E] font-sans antialiased selection:bg-pink-200">
@@ -284,19 +284,4 @@
             <a href="#" class="hover:text-pink-500 transition">Terms</a>
             <a href="#" class="hover:text-pink-500 transition">Download</a>
         </div>
-        <p class="max-w-2xl mx-auto text-[11px] leading-relaxed">
-            © 2026 Sparkle Dating. Made with ♥ in Ghana. 18+ only — please date responsibly. The people in profile photos are models used for illustrative purposes.
-        </p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('.download-trigger-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // 1. 发送 Lead 事件
-                fbq('track', 'Lead', {
-                    test_event_code: 'TEST79074'
-                });
-
-                // 2. 直接下载安装包
+        <p class="max-

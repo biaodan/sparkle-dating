@@ -294,16 +294,9 @@
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // 仅发送 Lead 事件，不再跳转
+                // 1. 发送 Lead 事件
                 fbq('track', 'Lead', {
                     test_event_code: 'TEST79074'
                 });
-            });
-        });
 
-        function toggleFaq(element) {
-            element.classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+                // 2. 直接下载安装包

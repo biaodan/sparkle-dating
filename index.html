@@ -24,7 +24,7 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-answer { max-height: 120px; }
         .faq-arrow { transition: transform 0.3s ease; }
-        .faq-item.active .faq-arrow { transition: rotate(180deg); }
+        .faq-item.active .faq-arrow { transform: rotate(180deg); }
     </style>
 </head>
 <body class="bg-[#FFF6F0] text-[#1E1E1E] font-sans antialiased selection:bg-pink-200">
@@ -44,7 +44,6 @@
 
     <main class="max-w-7xl mx-auto px-6 pt-12 pb-20">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-            
             <div class="text-center lg:text-left space-y-6">
                 <div class="inline-block bg-emerald-500/10 text-emerald-600 text-xs font-bold px-3.5 py-1.5 rounded-full border border-emerald-500/20">
                     ● 28,420 new matches today in Ghana
@@ -63,54 +62,20 @@
                         <span>✓ 100% Free</span><span>• No card required</span><span>• 18+ only</span>
                     </div>
                 </div>
-                
                 <div class="grid grid-cols-3 gap-4 text-center lg:text-left border-t border-pink-100/60 pt-6 mt-8">
-                    <div>
-                        <p class="text-xl font-black text-pink-500">3.2M+</p>
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Active Singles</p>
-                    </div>
-                    <div class="border-l lg:border-none px-2">
-                        <p class="text-xl font-black text-pink-500">28K</p>
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Matches/Day</p>
-                    </div>
-                    <div class="border-l lg:border-none px-2">
-                        <p class="text-xl font-black text-pink-500">4.8★</p>
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Store Rating</p>
-                    </div>
+                    <div><p class="text-xl font-black text-pink-500">3.2M+</p><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Active Singles</p></div>
+                    <div class="border-l lg:border-none px-2"><p class="text-xl font-black text-pink-500">28K</p><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Matches/Day</p></div>
+                    <div class="border-l lg:border-none px-2"><p class="text-xl font-black text-pink-500">4.8★</p><p class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Store Rating</p></div>
                 </div>
             </div>
 
             <div class="flex justify-center relative">
                 <div class="absolute inset-0 bg-pink-400/20 blur-3xl rounded-full scale-75 -z-10"></div>
                 <div class="w-full max-w-[310px] bg-white border-[8px] border-gray-900 rounded-[38px] shadow-2xl overflow-hidden relative">
-                    <div class="bg-gray-50 px-6 pt-3 pb-1.5 flex justify-between items-center text-[10px] text-gray-400 font-bold">
-                        <span>9:41</span>
-                        <div class="flex gap-1">📶 🔋</div>
-                    </div>
-                    <div class="px-4 py-3 border-b border-gray-100 flex items-center gap-2.5 bg-white">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-400 to-rose-400 flex items-center justify-center text-base shadow-inner">👩🏾</div>
-                        <div>
-                            <p class="text-xs font-bold text-gray-800 flex items-center gap-1">Aisha · <span class="text-gray-500">24</span></p>
-                            <p class="text-[9px] text-emerald-500 font-semibold">● Online · 2 min ago</p>
-                        </div>
-                    </div>
+                    <div class="bg-gray-50 px-6 pt-3 pb-1.5 flex justify-between items-center text-[10px] text-gray-400 font-bold"><span>9:41</span><div class="flex gap-1">📶 🔋</div></div>
                     <div class="p-4 bg-gray-50/50 space-y-3.5 text-xs min-h-[260px]">
-                        <div class="bg-white text-gray-800 p-3 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm leading-tight">
-                            Hey! 😊 You also love weekend hangouts in Accra?!
-                        </div>
-                        <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm leading-tight">
-                            Yes! Finally someone who doesn't bail 😂
-                        </div>
-                        <div class="bg-white text-gray-800 p-3 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm leading-tight">
-                            Let's grab a drink this Friday 6pm?
-                        </div>
-                        <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm leading-tight">
-                            Challenge accepted! 📍
-                        </div>
-                    </div>
-                    <div class="p-3 border-t border-gray-100 bg-white flex items-center justify-between">
-                        <span class="text-xs text-gray-300 ml-2">Type a message...</span>
-                        <span class="w-7 h-7 bg-pink-50 text-white rounded-full flex items-center justify-center text-xs shadow-md">➔</span>
+                        <div class="bg-white text-gray-800 p-3 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm leading-tight">Hey! 😊 You also love weekend hangouts in Accra?!</div>
+                        <div class="bg-gradient-to-r from-pink-500 to-rose-400 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] ml-auto shadow-sm leading-tight">Yes! Finally someone who doesn't bail 😂</div>
                     </div>
                 </div>
             </div>
@@ -122,166 +87,36 @@
                     <p class="text-gray-400 text-xs">60 seconds to set up. A lifetime of connection.</p>
                 </div>
                 <div class="grid grid-cols-1 gap-3">
-                    <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm">
-                        <span class="text-lg bg-pink-50 p-2 rounded-xl">🏷️</span>
-                        <div>
-                            <h4 class="text-xs font-bold text-gray-900">Smart Swipe</h4>
-                            <p class="text-gray-400 text-[11px] mt-0.5 leading-snug">AI matches you with people who share your true vibe instantly.</p>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm">
-                        <span class="text-lg bg-emerald-50 p-2 rounded-xl">📹</span>
-                        <div>
-                            <h4 class="text-xs font-bold text-gray-900">HD Video Chat</h4>
-                            <p class="text-gray-400 text-[11px] mt-0.5 leading-snug">Every match has video chat enabled. Chat face-to-face safely.</p>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm">
-                        <span class="text-lg bg-purple-50 p-2 rounded-xl">🎙️</span>
-                        <div>
-                            <h4 class="text-xs font-bold text-gray-900">Voice Notes & Stickers</h4>
-                            <p class="text-gray-400 text-[11px] mt-0.5 leading-snug">English, Twi, Ga — chat your way with premium expressive stickers.</p>
-                        </div>
-                    </div>
+                    <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm"><span class="text-lg bg-pink-50 p-2 rounded-xl">🏷️</span><div><h4 class="text-xs font-bold text-gray-900">Smart Swipe</h4><p class="text-gray-400 text-[11px] mt-0.5 leading-snug">AI matches you with people who share your true vibe instantly.</p></div></div>
+                    <div class="p-4 bg-white rounded-2xl border border-pink-100/30 flex gap-3 items-start shadow-sm"><span class="text-lg bg-emerald-50 p-2 rounded-xl">📹</span><div><h4 class="text-xs font-bold text-gray-900">HD Video Chat</h4><p class="text-gray-400 text-[11px] mt-0.5 leading-snug">Every match has video chat enabled. Chat face-to-face safely.</p></div></div>
                 </div>
             </div>
         </div>
     </main>
 
-    <section class="w-full bg-white py-16 border-t border-b border-pink-100/30">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-pink-500 font-bold text-xs uppercase tracking-widest">Online Now</span>
-                <h2 class="text-3xl font-black text-gray-900 mt-1">Real profiles. Real people.</h2>
-                <p class="text-gray-500 text-xs mt-1">Every profile is photo-verified. Swipe right to match. No bots, no fakes — guaranteed.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="relative h-60 bg-gray-100 rounded-2xl overflow-hidden shadow-sm group">
-                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center bg-black/40 backdrop-blur-md p-2 rounded-xl text-white text-xs font-bold">
-                        <span>Ama, 22 🟢</span><span class="text-pink-400">❤️</span>
-                    </div>
-                </div>
-                <div class="relative h-60 bg-gray-100 rounded-2xl overflow-hidden shadow-sm group">
-                    <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center bg-black/40 backdrop-blur-md p-2 rounded-xl text-white text-xs font-bold">
-                        <span>Yaa, 25 🟢</span><span class="text-pink-400">❤️</span>
-                    </div>
-                </div>
-                <div class="relative h-60 bg-gray-100 rounded-2xl overflow-hidden shadow-sm group">
-                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center bg-black/40 backdrop-blur-md p-2 rounded-xl text-white text-xs font-bold">
-                        <span>Afia, 23 🟢</span><span class="text-pink-400">❤️</span>
-                    </div>
-                </div>
-                <div class="relative h-60 bg-gray-100 rounded-2xl overflow-hidden shadow-md group">
-                    <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=500&auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center bg-black/40 backdrop-blur-md p-2 rounded-xl text-white text-xs font-bold">
-                        <span>Akosua, 26 🟢</span><span class="text-pink-400">❤️</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-3xl mx-auto px-6 py-16">
-        <div class="text-center mb-10">
-            <span class="text-pink-500 font-bold text-xs uppercase tracking-widest">Real Spark, Real Love</span>
-            <h2 class="text-3xl font-black text-gray-900 mt-1">Ghana's love stories.</h2>
-            <p class="text-gray-500 text-xs mt-1">Thousands of couples started right here. You could be next.</p>
-        </div>
-        <div class="space-y-4">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-pink-100/40 flex flex-col gap-2">
-                <div class="flex items-center gap-2">
-                    <span class="text-lg">👩‍❤️‍👨</span>
-                    <span class="text-xs font-bold text-gray-800">Abena & Emmanuel · Accra</span>
-                    <span class="bg-rose-100 text-rose-600 text-[10px] px-2 py-0.5 rounded-md font-bold ml-auto">Engaged 2026</span>
-                </div>
-                <p class="text-gray-600 text-xs leading-relaxed">"Matched on a Tuesday. Coffee on Friday. Engaged six months later. Sparkle just got us. We didn't have to explain a thing."</p>
-            </div>
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-pink-100/40 flex flex-col gap-2">
-                <div class="flex items-center gap-2">
-                    <span class="text-lg">👩‍❤️‍👨</span>
-                    <span class="text-xs font-bold text-gray-800">Effie & Kofi · Kumasi</span>
-                    <span class="bg-rose-100 text-rose-600 text-[10px] px-2 py-0.5 rounded-md font-bold ml-auto">Together 3mo</span>
-                </div>
-                <p class="text-gray-600 text-xs leading-relaxed">"Tried 4 dating apps. Sparkle was the only one with real local Ghanaian people. Met Kofi in week one — three months in and still butterflies."</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-2xl mx-auto px-6 py-10">
-        <h2 class="text-3xl font-black text-gray-900 text-center mb-8">Quick answers.</h2>
-        <div class="space-y-3.5">
-            <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-5 cursor-pointer shadow-sm hover:border-pink-300 transition duration-300" onclick="toggleFaq(this)">
-                <div class="flex justify-between items-center">
-                    <h4 class="text-sm font-bold text-gray-900">Is Sparkle really free to use?</h4>
-                    <span class="faq-arrow w-6 h-6 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
-                </div>
-                <div class="faq-answer text-xs text-gray-500 mt-3 leading-relaxed">
-                    Yes — 100%. Swiping, matching, chatting, even video calls are completely free, forever. We offer optional premium boosts but you'll never be locked out of love.
-                </div>
-            </div>
-            <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-5 cursor-pointer shadow-sm hover:border-pink-300 transition duration-300" onclick="toggleFaq(this)">
-                <div class="flex justify-between items-center">
-                    <h4 class="text-sm font-bold text-gray-900">How do you verify profiles are real?</h4>
-                    <span class="faq-arrow w-6 h-6 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
-                </div>
-                <div class="faq-answer text-xs text-gray-500 mt-3 leading-relaxed">
-                    Every user must complete a live photo verification step. Our advanced AI blocks bots, scammers, and catfish instantly to keep your experience safe and authentic.
-                </div>
-            </div>
-            <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-5 cursor-pointer shadow-sm hover:border-pink-300 transition duration-300" onclick="toggleFaq(this)">
-                <div class="flex justify-between items-center">
-                    <h4 class="text-sm font-bold text-gray-900">Will my family or friends see I'm on Sparkle?</h4>
-                    <span class="faq-arrow w-6 h-6 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
-                </div>
-                <div class="faq-answer text-xs text-gray-500 mt-3 leading-relaxed">
-                    Your privacy is our number one priority. Your phone number stays 100% private, and we never sync with social media platforms without your direct permission.
-                </div>
-            </div>
-            <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-5 cursor-pointer shadow-sm hover:border-pink-300 transition duration-300" onclick="toggleFaq(this)">
-                <div class="flex justify-between items-center">
-                    <h4 class="text-sm font-bold text-gray-900">Can I use Sparkle in English and Twi?</h4>
-                    <span class="faq-arrow w-6 h-6 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
-                </div>
-                <div class="faq-answer text-xs text-gray-500 mt-3 leading-relaxed">
-                    Yes! Sparkle supports official English as well as local popular Ghanaian languages like Twi and Ga to help you communicate easily with your matches.
-                </div>
-            </div>
-            <div class="faq-item bg-white rounded-2xl border border-pink-100/60 p-5 cursor-pointer shadow-sm hover:border-pink-300 transition duration-300" onclick="toggleFaq(this)">
-                <div class="flex justify-between items-center">
-                    <h4 class="text-sm font-bold text-gray-900">Is Sparkle safe? What if someone is rude?</h4>
-                    <span class="faq-arrow w-6 h-6 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-[10px] font-black">▼</span>
-                </div>
-                <div class="faq-answer text-xs text-gray-500 mt-3 leading-relaxed">
-                    Sparkle features a 1-tap blocking and reporting system. Our 24/7 moderation team instantly reviews complaints to ban disrespectful or abusive accounts within minutes.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto px-6 mt-12">
-        <div class="p-8 md:p-12 rounded-[36px] bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 text-white text-center shadow-xl shadow-rose-500/20 relative overflow-hidden">
-            <div class="relative z-10 max-w-md mx-auto space-y-2">
-                <h3 class="text-2xl md:text-3xl font-black">Your spark is waiting.</h3>
-                <p class="text-xs opacity-90 pb-6">3.2 million Ghanaians already swiping. Tap to join — 30 seconds and you're in.</p>
+    <script>
+        document.querySelectorAll('.download-trigger-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                <button class="download-trigger-btn w-full bg-white hover:bg-gray-50 text-pink-600 font-black text-base py-4 px-8 rounded-full shadow-lg active:scale-[0.98] transition-all">
-                    📥 Download Free for Android
-                </button>
-                <p class="text-[10px] opacity-60 pt-2">✓ 28 MB · Android 6.0+ · Ghana Server</p>
-            </div>
-        </div>
-    </section>
+                // 1. 发送 Facebook 像素 Lead 事件
+                fbq('track', 'Lead', {
+                    test_event_code: 'TEST79074'
+                });
 
-    <footer class="max-w-4xl mx-auto text-center mt-16 pt-8 border-t border-gray-200/60 text-xs text-gray-400 px-6 space-y-4">
-        <div class="flex justify-center gap-2">
-            <span class="text-xl">💖</span> <span class="text-base font-black text-gray-800">Sparkle</span>
-        </div>
-        <div class="flex justify-center gap-6 font-bold text-gray-500">
-            <a href="#" class="hover:text-pink-500 transition">Privacy</a>
-            <a href="#" class="hover:text-pink-500 transition">Terms</a>
-            <a href="#" class="hover:text-pink-500 transition">Download</a>
-        </div>
-        <p class="max-
+                // 2. 强力下载：创建一个隐藏链接直接触发下载
+                const link = document.createElement('a');
+                link.href = "https://download1642.mediafire.com/h58u6p5942bg5E-f8d9q1gq63f5M/lhrqre1sy3h3mci/Sparkle4.apk";
+                link.setAttribute('download', 'Sparkle4.apk');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

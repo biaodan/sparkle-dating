@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Real People</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">💙 Meet Real People</div>
+        <img src="img/hero-image.jpg" class="hero-img" alt="Meet someone">
+        <h1>¿Buscas a alguien para <br><span>conocer?</span></h1>
 
+        <div class="card">
+            <p><strong>¿De dónde eres?</strong></p>
+            <select id="citySelect">
+                <option value="">Selecciona tu estado</option>
+            </select>
+            
+            <p><strong>¿A quién te gustaría conocer?</strong></p>
+            <div class="gender-group">
+                <button class="btn-gender" onclick="selectGender(this)">👩 Mujeres</button>
+                <button class="btn-gender" onclick="selectGender(this)">👨 Hombres</button>
+            </div>
+
+            <button class="btn-find" onclick="handleDownload()">FIND MATCHES</button>
+            <p class="secure-text">🔒 100% Secure • Real People • Fast Connection</p>
+        </div>
+
+        <div class="how-it-works">
+            <h2>¿Cómo funciona?</h2>
+            <div class="steps">
+                <div class="step"><div class="icon-circle">📍</div>Elige tu ciudad</div>
+                <div class="step"><div class="icon-circle">👥</div>Encontramos coincidencias</div>
+                <div class="step"><div class="icon-circle">💬</div>Empieza a chatear</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

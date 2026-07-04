@@ -1,0 +1,5 @@
+body{font-family:Arial,sans-serif;background:#f5f7fb;display:flex;justify-content:center;padding:40px}
+.card{background:#fff;max-width:420px;width:100%;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+select,button{width:100%;padding:14px;margin-top:12px;border-radius:12px}
+button{background:#21c45d;color:#fff;border:0;font-weight:bold;cursor:pointer}
+.free{text-align:center;color:#666}
